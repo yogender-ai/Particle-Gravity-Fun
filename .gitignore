@@ -1,0 +1,25 @@
+# Build artifacts
+/node_modules/
+/dist/
+/target/
+/build/
+
+# Compilation outputs
+*.wasm
+*.so
+*.dll
+*.exe
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vs/
+.vscode/
+*.swp
+*.swo
+
+# Project specific
+rust_engine/target/
+app.min.js.map
