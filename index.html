@@ -164,24 +164,31 @@
         }
 
         #manual {
-            position: absolute;
+            position: fixed;
             left: 20px;
             bottom: 96px;
-            z-index: 15;
+            z-index: 25;
             width: min(360px, calc(100vw - 40px));
-            display: none;
             color: rgba(255, 255, 255, 0.78);
-            background: rgba(0, 0, 0, 0.62);
+            background: rgba(0, 0, 0, 0.72);
             border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 8px;
-            padding: 14px 16px;
+            border-radius: 12px;
+            padding: 16px 18px;
             font-size: 11px;
             line-height: 1.55;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(12px);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+            pointer-events: none;
         }
 
         #manual.open {
-            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
         }
 
         #manual strong {
@@ -230,7 +237,7 @@
         <button onclick="setShape('flower')">Flower</button>
         <button onclick="setShape('fireworks')">Fireworks</button>
         <button onclick="setShape('duel')">Duel</button>
-        <button onclick="toggleManual()">Manual</button>
+        <button onclick="toggleManual(event)">Manual</button>
         <button onclick="toggleFullscreen()">[ ]</button>
     </div>
 
