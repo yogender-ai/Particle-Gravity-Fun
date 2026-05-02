@@ -51,7 +51,10 @@
             transform: translateX(-50%);
             z-index: 10;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 15px;
+            max-width: calc(100vw - 40px);
             background: rgba(0, 0, 0, 0.4);
             padding: 10px 20px;
             border-radius: 30px;
@@ -171,7 +174,7 @@
 
 <body>
     <div id="loading">INITIALIZING SECURE CORE...</div>
-    <div id="instruction">Use [INDEX FINGER] to control particles. [PINCH] to change colors.</div>
+    <div id="instruction">Use [INDEX FINGER] to control particles. [DUEL] uses both hands. [PINCH] boosts energy.</div>
 
     <div id="socials">
         <a href="https://github.com/yogender-ai/Particle-Gravity-Fun" target="_blank" class="social-link">★ Star on
@@ -186,6 +189,7 @@
         <button onclick="setShape('saturn')">Saturn</button>
         <button onclick="setShape('flower')">Flower</button>
         <button onclick="setShape('fireworks')">Fireworks</button>
+        <button onclick="setShape('duel')">Duel</button>
         <button onclick="toggleFullscreen()">[ ]</button>
     </div>
 
