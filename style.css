@@ -1,5 +1,5 @@
 /* ============================================================
-   QUANTUM FLUX v2.0 - by Yogender
+   QUANTUM FLUX v2.1 - by Yogender
    ============================================================ */
 
 * {
@@ -49,7 +49,7 @@ canvas {
 }
 
 /* ============================================================
-   INSTRUCTION BAR (TOP)
+   INSTRUCTION BAR
    ============================================================ */
 #instruction {
     position: absolute;
@@ -88,7 +88,7 @@ canvas {
     border: 1px solid rgba(0, 255, 255, 0.25);
     border-radius: 12px;
     padding: 12px 16px;
-    min-width: 170px;
+    min-width: 180px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
@@ -114,6 +114,44 @@ canvas {
     font-family: 'Courier New', monospace;
 }
 
+.hud-row.charge {
+    color: #ffaa44;
+    animation: pulse-row 0.6s infinite alternate;
+}
+
+.hud-row.charge b {
+    color: #ffaa44;
+    text-shadow: 0 0 10px rgba(255, 170, 68, 0.8);
+}
+
+.hud-row.fire {
+    color: #ff4444;
+    animation: pulse-row 0.2s infinite alternate;
+}
+
+.hud-row.fire b {
+    color: #ff8844;
+    text-shadow: 0 0 10px rgba(255, 100, 0, 1);
+}
+
+.hud-row.hint {
+    color: rgba(255, 215, 0, 0.7);
+    font-size: 9px;
+    margin-top: 5px;
+    text-align: center;
+    justify-content: center;
+}
+
+@keyframes pulse-row {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+}
+
 .hud-combo {
     margin-top: 8px;
     padding-top: 8px;
@@ -137,7 +175,7 @@ canvas {
     }
 }
 
-/* HUD flash banner (center top, big text on event) */
+/* HUD flash banner (center, big text on event) */
 #hud-flash {
     position: absolute;
     top: 50%;
@@ -154,7 +192,6 @@ canvas {
         0 0 20px #0ff,
         0 0 40px #0ff,
         0 0 60px rgba(0, 255, 255, 0.5);
-    transition: none;
     text-align: center;
     white-space: nowrap;
 }
@@ -224,7 +261,7 @@ canvas {
 }
 
 /* ============================================================
-   UI BUTTON BAR (BOTTOM)
+   UI BUTTON BAR
    ============================================================ */
 #ui {
     position: absolute;
@@ -276,7 +313,7 @@ button.active {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
 }
 
-/* Special button styles */
+/* Battle button (gold) */
 .battle-btn {
     border-color: rgba(255, 215, 0, 0.4) !important;
     color: rgba(255, 215, 0, 0.9) !important;
@@ -293,8 +330,20 @@ button.active {
     border-color: #ff8800 !important;
     color: #ffaa44 !important;
     box-shadow: 0 0 18px rgba(255, 136, 0, 0.6) !important;
+    animation: battle-glow 1.2s infinite alternate;
 }
 
+@keyframes battle-glow {
+    from {
+        box-shadow: 0 0 18px rgba(255, 136, 0, 0.6);
+    }
+
+    to {
+        box-shadow: 0 0 28px rgba(255, 136, 0, 1);
+    }
+}
+
+/* Music button (purple) */
 .music-btn {
     border-color: rgba(180, 100, 255, 0.4) !important;
     color: rgba(200, 150, 255, 0.9) !important;
@@ -433,6 +482,159 @@ button.active {
 }
 
 /* ============================================================
+   AUDIO PANEL
+   ============================================================ */
+#audioPanel {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    z-index: 25;
+    width: min(340px, calc(100vw - 40px));
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(20, 0, 40, 0.88);
+    border: 1px solid rgba(180, 100, 255, 0.35);
+    border-radius: 14px;
+    padding: 18px 20px;
+    font-size: 11.5px;
+    line-height: 1.5;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    pointer-events: none;
+    box-shadow: 0 0 30px rgba(180, 100, 255, 0.2);
+}
+
+#audioPanel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#audioPanel strong {
+    display: block;
+    color: #c080ff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-shadow: 0 0 8px rgba(180, 100, 255, 0.5);
+}
+
+#audioPanel .ap-note {
+    background: rgba(255, 100, 100, 0.12);
+    border-left: 2px solid rgba(255, 100, 100, 0.5);
+    padding: 6px 10px;
+    margin: 8px 0 14px;
+    font-size: 10px;
+    color: rgba(255, 200, 200, 0.85);
+    border-radius: 4px;
+    line-height: 1.4;
+}
+
+#audioPanel .ap-divider {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+    margin: 12px 0;
+    letter-spacing: 2px;
+}
+
+#audioPanel .ap-label {
+    display: block;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#audioPanel input[type="text"] {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(180, 100, 255, 0.3);
+    border-radius: 6px;
+    padding: 8px 10px;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    margin-bottom: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#audioPanel input[type="text"]:focus {
+    border-color: #c080ff;
+    box-shadow: 0 0 10px rgba(180, 100, 255, 0.3);
+}
+
+#audioPanel .ap-btn {
+    display: block;
+    width: 100%;
+    background: rgba(180, 100, 255, 0.15);
+    border: 1px solid rgba(180, 100, 255, 0.4);
+    color: #e0b0ff;
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin: 6px 0;
+    text-transform: none;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+#audioPanel .ap-btn:hover {
+    background: rgba(180, 100, 255, 0.3);
+    border-color: #c080ff;
+    box-shadow: 0 0 14px rgba(180, 100, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+#audioPanel .ap-btn.primary {
+    background: rgba(180, 100, 255, 0.3);
+    color: #fff;
+}
+
+#audioPanel .ap-btn.mic {
+    background: rgba(60, 200, 120, 0.15);
+    border-color: rgba(60, 200, 120, 0.4);
+    color: #80ffaa;
+}
+
+#audioPanel .ap-btn.mic:hover {
+    background: rgba(60, 200, 120, 0.3);
+    border-color: #60ffaa;
+    box-shadow: 0 0 14px rgba(60, 200, 120, 0.5);
+}
+
+#audioPanel .ap-btn.stop {
+    background: rgba(255, 80, 80, 0.12);
+    border-color: rgba(255, 80, 80, 0.35);
+    color: rgba(255, 150, 150, 0.9);
+    margin-top: 12px;
+}
+
+#audioPanel .ap-btn.stop:hover {
+    background: rgba(255, 80, 80, 0.25);
+    border-color: #ff6060;
+    box-shadow: 0 0 14px rgba(255, 80, 80, 0.5);
+}
+
+#audioPanel .ap-tip {
+    margin: 6px 0 0;
+    font-size: 10px;
+    color: rgba(180, 255, 200, 0.7);
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 700px) {
@@ -478,5 +680,10 @@ button.active {
     .social-link {
         font-size: 10px;
         padding: 5px 9px;
+    }
+
+    #audioPanel {
+        right: 10px;
+        bottom: 90px;
     }
 }
