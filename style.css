@@ -1,107 +1,482 @@
+/* ============================================================
+   QUANTUM FLUX v2.0 - by Yogender
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     overflow: hidden;
-    background-color: #000;
+    background: #000;
     font-family: 'Courier New', Courier, monospace;
+    color: #fff;
 }
 
 canvas {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
 }
 
+.input_video {
+    display: none;
+}
+
+/* ============================================================
+   LOADING SCREEN
+   ============================================================ */
 #loading {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
-    font-size: 1.5rem;
-    pointer-events: none;
-    z-index: 10;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    animation: pulse 1.5s infinite;
-}
-
-#ui-container {
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-    text-align: center;
-    z-index: 20;
-    pointer-events: none;
-}
-
-.controls {
-    pointer-events: auto;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-button {
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid #444;
-    color: #fff;
-    padding: 10px 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-}
-
-button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #fff;
-    transform: scale(1.05);
-}
-
-button.active {
-    background: rgba(0, 255, 255, 0.3);
-    border-color: #0ff;
     color: #0ff;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    font-size: 14px;
+    letter-spacing: 0.3em;
+    z-index: 100;
+    animation: blink 1.2s infinite;
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
 }
 
-.instructions {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 20px;
-    font-size: 0.9rem;
-    text-shadow: 0 0 5px #000;
+@keyframes blink {
+    50% {
+        opacity: 0.4;
+    }
 }
 
-@keyframes pulse {
-    0% {
-        opacity: 0.5;
+/* ============================================================
+   INSTRUCTION BAR (TOP)
+   ============================================================ */
+#instruction {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 11px;
+    letter-spacing: 1px;
+    pointer-events: none;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    max-width: calc(100vw - 40px);
+    text-align: center;
+}
+
+#instruction .ico {
+    margin-right: 3px;
+    filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.5));
+}
+
+/* ============================================================
+   HUD (Top-left score panel)
+   ============================================================ */
+#hud {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(0, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 12px 16px;
+    min-width: 170px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.hud-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 3px 0;
+}
+
+.hud-row b {
+    color: #0ff;
+    font-size: 14px;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+    margin-left: 12px;
+    font-family: 'Courier New', monospace;
+}
+
+.hud-combo {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+    color: #ffd700;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    animation: combo-pulse 0.4s infinite alternate;
+}
+
+@keyframes combo-pulse {
+    from {
+        transform: scale(1);
     }
 
-    50% {
+    to {
+        transform: scale(1.08);
+    }
+}
+
+/* HUD flash banner (center top, big text on event) */
+#hud-flash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    color: #fff;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0;
+    text-shadow:
+        0 0 20px #0ff,
+        0 0 40px #0ff,
+        0 0 60px rgba(0, 255, 255, 0.5);
+    transition: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#hud-flash.show {
+    animation: flash-pop 1.4s ease-out forwards;
+}
+
+@keyframes flash-pop {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    20% {
         opacity: 1;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
     }
 
     100% {
-        opacity: 0.5;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.4);
     }
 }
 
-#watermark {
+/* ============================================================
+   AUDIO REACTIVE BAR (Bottom)
+   ============================================================ */
+#audio-bar {
     position: absolute;
-    bottom: 10px;
-    right: 20px;
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 0.8rem;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    z-index: 4;
+    display: flex;
     pointer-events: none;
-    z-index: 100;
+    opacity: 0.6;
+}
+
+#audio-bass,
+#audio-mid,
+#audio-treble {
+    flex: 1;
+    height: 100%;
+    transition: background 0.08s linear;
+}
+
+#audio-bass {
+    background: rgba(255, 60, 120, 0.7);
+    box-shadow: 0 0 12px rgba(255, 60, 120, 0.7);
+}
+
+#audio-mid {
+    background: rgba(120, 200, 255, 0.7);
+    box-shadow: 0 0 12px rgba(120, 200, 255, 0.7);
+}
+
+#audio-treble {
+    background: rgba(255, 255, 120, 0.7);
+    box-shadow: 0 0 12px rgba(255, 255, 120, 0.7);
+}
+
+/* ============================================================
+   UI BUTTON BAR (BOTTOM)
+   ============================================================ */
+#ui {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: calc(100vw - 30px);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 18px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
     text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #fff;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+button.active {
+    background: rgba(0, 255, 255, 0.15);
+    border-color: #0ff;
+    color: #0ff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Special button styles */
+.battle-btn {
+    border-color: rgba(255, 215, 0, 0.4) !important;
+    color: rgba(255, 215, 0, 0.9) !important;
+}
+
+.battle-btn:hover {
+    background: rgba(255, 215, 0, 0.12) !important;
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 18px rgba(255, 215, 0, 0.6) !important;
+}
+
+.battle-btn.active {
+    background: rgba(255, 100, 0, 0.25) !important;
+    border-color: #ff8800 !important;
+    color: #ffaa44 !important;
+    box-shadow: 0 0 18px rgba(255, 136, 0, 0.6) !important;
+}
+
+.music-btn {
+    border-color: rgba(180, 100, 255, 0.4) !important;
+    color: rgba(200, 150, 255, 0.9) !important;
+}
+
+.music-btn:hover {
+    background: rgba(180, 100, 255, 0.12) !important;
+    border-color: #c080ff !important;
+    box-shadow: 0 0 18px rgba(180, 100, 255, 0.6) !important;
+}
+
+.music-btn.active {
+    background: rgba(180, 100, 255, 0.25) !important;
+    border-color: #c080ff !important;
+    color: #e0b0ff !important;
+    box-shadow: 0 0 18px rgba(180, 100, 255, 0.7) !important;
+    animation: music-pulse 1.5s infinite;
+}
+
+@keyframes music-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 18px rgba(180, 100, 255, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 28px rgba(180, 100, 255, 1);
+    }
+}
+
+/* ============================================================
+   SOCIALS (TOP RIGHT)
+   ============================================================ */
+#socials {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 20;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    font-size: 11px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s;
     letter-spacing: 1px;
-    font-family: 'Courier New', Courier, monospace;
-    user-select: none;
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.25);
+    transform: translateX(-2px);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+#footer {
+    position: absolute;
+    bottom: 6px;
+    right: 14px;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 9px;
+    z-index: 5;
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+
+#footer b {
+    color: rgba(0, 255, 255, 0.7);
+    font-weight: normal;
+}
+
+/* ============================================================
+   MANUAL PANEL
+   ============================================================ */
+#manual {
+    position: fixed;
+    left: 20px;
+    bottom: 100px;
+    z-index: 25;
+    width: min(380px, calc(100vw - 40px));
+    color: rgba(255, 255, 255, 0.82);
+    background: rgba(0, 0, 0, 0.78);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 14px;
+    padding: 18px 20px;
+    font-size: 11.5px;
+    line-height: 1.65;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    pointer-events: none;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+#manual.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#manual strong {
+    display: block;
+    color: #0ff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+#manual p {
+    margin: 7px 0;
+}
+
+#manual p b {
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0, 255, 255, 0.4);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 700px) {
+    #hud {
+        top: 60px;
+        left: 10px;
+        padding: 8px 12px;
+        min-width: 140px;
+    }
+
+    .hud-row {
+        font-size: 9px;
+    }
+
+    .hud-row b {
+        font-size: 12px;
+    }
+
+    #instruction {
+        font-size: 9.5px;
+        padding: 6px 12px;
+    }
+
+    #ui {
+        padding: 8px 12px;
+        gap: 6px;
+    }
+
+    button {
+        padding: 6px 11px;
+        font-size: 9px;
+    }
+
+    #hud-flash {
+        font-size: 32px;
+    }
+
+    #socials {
+        top: 14px;
+        right: 12px;
+    }
+
+    .social-link {
+        font-size: 10px;
+        padding: 5px 9px;
+    }
 }
