@@ -207,13 +207,13 @@ canvas {
 }
 
 .hp-fill.p1 {
-    background: linear-gradient(90deg, #00d5ff, #7af3ff);
-    box-shadow: 0 0 10px rgba(0, 213, 255, 0.65);
+    background: linear-gradient(90deg, #032b7a, #0067d8);
+    box-shadow: 0 0 9px rgba(0, 80, 216, 0.55);
 }
 
 .hp-fill.p2 {
-    background: linear-gradient(90deg, #ff7a18, #ffd166);
-    box-shadow: 0 0 10px rgba(255, 122, 24, 0.65);
+    background: linear-gradient(90deg, #5e0612, #c60b22);
+    box-shadow: 0 0 9px rgba(198, 11, 34, 0.55);
 }
 
 /* HUD flash banner (center, big text on event) */
@@ -356,32 +356,21 @@ button.active {
 
 /* Battle button (gold) */
 .battle-btn {
-    border-color: rgba(255, 215, 0, 0.4) !important;
-    color: rgba(255, 215, 0, 0.9) !important;
+    border-color: rgba(0, 105, 216, 0.45) !important;
+    color: rgba(80, 150, 255, 0.92) !important;
 }
 
 .battle-btn:hover {
-    background: rgba(255, 215, 0, 0.12) !important;
-    border-color: #ffd700 !important;
-    box-shadow: 0 0 18px rgba(255, 215, 0, 0.6) !important;
+    background: rgba(0, 45, 112, 0.28) !important;
+    border-color: #0067d8 !important;
+    box-shadow: 0 0 14px rgba(0, 103, 216, 0.45) !important;
 }
 
 .battle-btn.active {
-    background: rgba(255, 100, 0, 0.25) !important;
-    border-color: #ff8800 !important;
-    color: #ffaa44 !important;
-    box-shadow: 0 0 18px rgba(255, 136, 0, 0.6) !important;
-    animation: battle-glow 1.2s infinite alternate;
-}
-
-@keyframes battle-glow {
-    from {
-        box-shadow: 0 0 18px rgba(255, 136, 0, 0.6);
-    }
-
-    to {
-        box-shadow: 0 0 28px rgba(255, 136, 0, 1);
-    }
+    background: rgba(8, 18, 38, 0.78) !important;
+    border-color: #0067d8 !important;
+    color: #8db9ff !important;
+    box-shadow: 0 0 14px rgba(0, 103, 216, 0.5) !important;
 }
 
 /* Music button (purple) */
