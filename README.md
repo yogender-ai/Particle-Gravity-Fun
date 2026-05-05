@@ -1,418 +1,212 @@
-<!-- ╔══════════════════════════════════════════════════════════╗ -->
-<!-- ║              QUANTUM FLUX · README v2.1                  ║ -->
-<!-- ║         Scroll slow. The cosmos rewards patience.        ║ -->
-<!-- ╚══════════════════════════════════════════════════════════╝ -->
-
 <a name="top"></a>
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,2,30&height=320&section=header&text=QUANTUM%20FLUX&fontSize=90&fontColor=ffffff&animation=twinkling&fontAlignY=40&desc=where%20physics%20meets%20art&descAlignY=62&descSize=20" width="100%" alt="Quantum Flux" />
+<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,2,30,24&height=330&section=header&text=FUN%20PARTICLE&fontSize=86&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=interactive%20particles%20%2B%20live%20feedback%20experience&descAlignY=62&descSize=20" width="100%" alt="Fun Particle animated header" />
 
-<a href="#">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=2800&pause=600&color=5EEAD4&background=00000000&center=true&vCenter=true&multiline=true&width=900&height=80&lines=%E2%9D%AF+initializing+quantum_flux.exe...;%E2%9D%AF+8%2C192+particles+spawned+%E2%9C%93;%E2%9D%AF+webcam+%E2%86%92+gravity+%E2%86%92+art+%E2%9C%A8" alt="Quantum Flux animated headline" />
+<a href="https://particle.yogender1.me">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=25&duration=2300&pause=650&color=5EEAD4&background=00000000&center=true&vCenter=true&multiline=true&width=950&height=95&lines=gesture+controlled+particle+gravity;audio+reactive+visuals+and+battle+modes;Firebase+powered+feedback+stream" alt="Animated project intro" />
 </a>
 
-<br/><br/>
+<br />
 
-<a href="https://particle-gravity-fun.pages.dev/">
-  <img src="https://img.shields.io/badge/%F0%9F%9A%80%20LAUNCH%20DEMO-Click%20to%20Enter%20the%20Void-000?style=for-the-badge&labelColor=000000&color=5eead4" height="42" alt="Launch demo" />
-</a>
-&nbsp;
-<a href="#-quick-start">
-  <img src="https://img.shields.io/badge/%E2%9A%A1%20QUICK%20START-60%20seconds-000?style=for-the-badge&labelColor=000000&color=fbbf24" height="42" alt="Quick start" />
+<a href="https://particle.yogender1.me">
+  <img src="https://img.shields.io/badge/Launch%20App-particle.yogender1.me-00d4ff?style=for-the-badge&labelColor=050816" height="40" alt="Launch app" />
 </a>
 &nbsp;
-<a href="#-feedback--speak-into-the-void">
-  <img src="https://img.shields.io/badge/%F0%9F%92%AB%20FEEDBACK-Shape%20the%20Future-000?style=for-the-badge&labelColor=000000&color=a78bfa" height="42" alt="Feedback" />
+<a href="https://particle.yogender1.me/feedback.html">
+  <img src="https://img.shields.io/badge/Live%20Feedback-Rate%20and%20Suggest-a78bfa?style=for-the-badge&labelColor=050816" height="40" alt="Open feedback page" />
+</a>
+&nbsp;
+<a href="https://github.com/yogender-ai/Fun-Particle-feedback">
+  <img src="https://img.shields.io/badge/GitHub-Fun--Particle--feedback-111111?style=for-the-badge&logo=github&logoColor=white" height="40" alt="GitHub repository" />
 </a>
 
-<br/><br/>
+<br /><br />
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=yogender-ai&repo=Particle-Gravity-Fun&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=5eead4&icon_color=fbbf24" alt="Quantum Flux GitHub card" />
+<img src="https://img.shields.io/github/stars/yogender-ai/Fun-Particle-feedback?style=for-the-badge&logo=apachespark&color=fbbf24&labelColor=050816&logoColor=fbbf24" alt="GitHub stars" />
+<img src="https://img.shields.io/github/forks/yogender-ai/Fun-Particle-feedback?style=for-the-badge&logo=git&color=a78bfa&labelColor=050816" alt="GitHub forks" />
+<img src="https://img.shields.io/github/issues/yogender-ai/Fun-Particle-feedback?style=for-the-badge&logo=github&color=ef4444&labelColor=050816" alt="GitHub issues" />
+<img src="https://img.shields.io/github/last-commit/yogender-ai/Fun-Particle-feedback?style=for-the-badge&logo=githubactions&color=22c55e&labelColor=050816" alt="Last commit" />
 
-<br/><br/>
+<br /><br />
 
-<img src="https://img.shields.io/github/stars/yogender-ai/Particle-Gravity-Fun?style=for-the-badge&logo=apachespark&color=fbbf24&labelColor=000&logoColor=fbbf24" alt="GitHub stars" />
-<img src="https://img.shields.io/github/forks/yogender-ai/Particle-Gravity-Fun?style=for-the-badge&logo=git&color=a78bfa&labelColor=000" alt="GitHub forks" />
-<img src="https://img.shields.io/github/issues/yogender-ai/Particle-Gravity-Fun?style=for-the-badge&logo=hackthebox&color=ef4444&labelColor=000" alt="GitHub issues" />
-<img src="https://img.shields.io/github/last-commit/yogender-ai/Particle-Gravity-Fun?style=for-the-badge&logo=githubactions&color=22c55e&labelColor=000" alt="Last commit" />
-<img src="https://komarev.com/ghpvc/?username=yogender-ai&label=COSMIC%20VISITORS&color=5eead4&style=for-the-badge&base=2847" alt="Profile views" />
-
-</div>
-
-<br/>
-
-<div align="center">
-
-```text
-╔════════ ⟨ QUICK NAV ⟩ ════════╗
-```
-
-[![What](https://img.shields.io/badge/%E2%97%89_what-0d1117?style=flat-square&labelColor=0d1117)](#-the-vision)
-[![How](https://img.shields.io/badge/%E2%97%89_how-0d1117?style=flat-square&labelColor=0d1117)](#-how-it-works)
-[![Stack](https://img.shields.io/badge/%E2%97%89_stack-0d1117?style=flat-square&labelColor=0d1117)](#-the-arsenal)
-[![Play](https://img.shields.io/badge/%E2%97%89_play-0d1117?style=flat-square&labelColor=0d1117)](#-control-grimoire)
-[![Build](https://img.shields.io/badge/%E2%97%89_build-0d1117?style=flat-square&labelColor=0d1117)](#-quick-start)
-[![Bench](https://img.shields.io/badge/%E2%97%89_bench-0d1117?style=flat-square&labelColor=0d1117)](#-benchmarks)
-[![Star](https://img.shields.io/badge/%E2%97%89_star-0d1117?style=flat-square&labelColor=0d1117)](#-show-some-love)
-
-```text
-╚═════════════════════════════════╝
-```
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=yogender-ai&repo=Fun-Particle-feedback&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=5eead4&icon_color=fbbf24" alt="Fun Particle Feedback GitHub card" />
 
 </div>
 
 ---
 
 <div align="center">
-  <h2>🎬 Watch The Cosmos Bend</h2>
 
-  <a href="https://particle-gravity-fun.pages.dev/">
-    <img src="https://raw.githubusercontent.com/yogender-ai/Particle-Gravity-Fun/3bd483e11b7e16edc07ba0b8d32a9fd28756063e/demo.gif" alt="Quantum Flux demo" width="85%" />
-  </a>
+### Quick Navigation
 
-  <br/><br/>
+[![Overview](https://img.shields.io/badge/Overview-0d1117?style=for-the-badge&labelColor=0d1117&color=5eead4)](#overview)
+[![Highlights](https://img.shields.io/badge/Highlights-0d1117?style=for-the-badge&labelColor=0d1117&color=a78bfa)](#highlights)
+[![Flow](https://img.shields.io/badge/Flow-0d1117?style=for-the-badge&labelColor=0d1117&color=fbbf24)](#feedback-flow)
+[![Stack](https://img.shields.io/badge/Stack-0d1117?style=for-the-badge&labelColor=0d1117&color=22c55e)](#tech-stack)
+[![Support](https://img.shields.io/badge/Support-0d1117?style=for-the-badge&labelColor=0d1117&color=ef4444)](#support)
 
-  <table>
-    <tr>
-      <td align="center"><a href="https://particle-gravity-fun.pages.dev/?mode=swarm"><img src="https://img.shields.io/badge/-%F0%9F%8C%80_SWARM-0d1117?style=for-the-badge" alt="Swarm mode" /></a></td>
-      <td align="center"><a href="https://particle-gravity-fun.pages.dev/?mode=heart"><img src="https://img.shields.io/badge/-%E2%9D%A4%EF%B8%8F_HEART-0d1117?style=for-the-badge" alt="Heart mode" /></a></td>
-      <td align="center"><a href="https://particle-gravity-fun.pages.dev/?mode=saturn"><img src="https://img.shields.io/badge/-%F0%9F%AA%90_SATURN-0d1117?style=for-the-badge" alt="Saturn mode" /></a></td>
-      <td align="center"><a href="https://particle-gravity-fun.pages.dev/?mode=fireworks"><img src="https://img.shields.io/badge/-%F0%9F%8E%86_FIREWORKS-0d1117?style=for-the-badge" alt="Fireworks mode" /></a></td>
-      <td align="center"><a href="https://particle-gravity-fun.pages.dev/?mode=battle"><img src="https://img.shields.io/badge/-%E2%9A%94%EF%B8%8F_BATTLE-0d1117?style=for-the-badge" alt="Battle mode" /></a></td>
-    </tr>
-  </table>
-
-  <sub><i>↑ click any mode to launch directly into it ↑</i></sub>
 </div>
 
 ---
 
-## 🪐 The Vision
+## Overview
 
-<table>
-<tr>
-<td width="60%">
+**Fun Particle Feedback** is the presentation and feedback hub for **Fun Particle**, an interactive browser experience where particle gravity responds to hand gestures, music, and game-like modes.
 
-```text
-    .  *      ✦       .         *  .
-   .          .       ✦        .
-✦ . * .                 . * ✦ . *
-          .  YOU  .              *
-.   ✦              ✦       .
-.       *       ✦      .   *
-   ✦         .  *               .
-   .          .       ✦        .
-```
+The feedback page gives visitors a simple way to rate the project, report bugs, share ideas, and help shape the next version.
 
-> _Not a game. Not a demo._
->
-> _**An experience.**_
+<div align="center">
 
-**Quantum Flux** dissolves the barrier between you and the screen. Your hand becomes a celestial body. Your gestures, gravitational law. Your webcam, the lens of a god.
+| Live App | Feedback Page | Repository |
+| --- | --- | --- |
+| [particle.yogender1.me](https://particle.yogender1.me) | [Send Feedback](https://particle.yogender1.me/feedback.html) | [Fun-Particle-feedback](https://github.com/yogender-ai/Fun-Particle-feedback) |
 
-Built on a **Rust-powered physics core** compiled to WebAssembly, it runs **8,192 particles at 60+ FPS**. AI vision tracks 21 hand landmarks in real time, translating motion into mathematics, and mathematics into magic.
-
-</td>
-<td width="40%" align="center">
-
-<img src="https://media.giphy.com/media/3o7TKsQ8gqVrxZZUEU/giphy.gif" width="100%" alt="Cosmic motion" />
-
-```diff
-+ 🌌 8,192 particles
-+ ⚡ 60+ FPS
-+ 🤖 AI hand tracking
-+ 🦀 Rust + WASM core
-+ 🎵 Audio reactive
-+ 🎨 6 morph shapes
-```
-
-</td>
-</tr>
-</table>
+</div>
 
 ---
 
-## ⚙️ How It Works
+## Highlights
+
+<div align="center">
+
+| Area | What it adds |
+| --- | --- |
+| Interactive particles | A browser-based particle playground controlled by hand motion. |
+| Gesture tracking | Webcam input turns finger movement into gravity and visual effects. |
+| Visual modes | Swarm, Heart, Saturn, Flower, Fireworks, Duel, Battle, and Survival. |
+| Audio reaction | Particles can react to uploaded audio, direct audio URLs, or microphone input. |
+| Feedback system | Users can rate the app, choose categories, and write suggestions. |
+| Live stream | Feedback appears in a live feed so the project feels active and community-driven. |
+| Firebase support | Google sign-in and Firestore keep feedback organized and protected. |
+| Creator-ready README | Animated banners, badges, diagrams, and clear project links for GitHub visitors. |
+
+</div>
+
+---
+
+## Experience Map
 
 ```mermaid
 flowchart LR
-    subgraph Input
-    A([📹 Webcam]):::cam
-    end
-
-    subgraph AI["🧠 AI Layer"]
-    B[MediaPipe Neural Net]:::ai
-    C[21 Landmarks per Hand]:::ai
-    end
-
-    subgraph Rust["🦀 Rust Core / WASM"]
-    D[Spatial Hash]:::rust
-    E[N-Body Solver]:::rust
-    F[Verlet Integration]:::rust
-    end
-
-    subgraph Render["🎨 GPU Render"]
-    G[Three.js Scene]:::gl
-    H[Custom Shaders]:::gl
-    I([💻 60+ FPS]):::result
-    end
-
-    A ==>|raw frames| B
-    B ==>|inference| C
-    C ==>|x, y, z coords| D
-    D ==>|neighbors| E
-    E ==>|forces| F
-    F ==>|positions| G
-    G ==>|draw calls| H
-    H ==> I
-
-    classDef cam fill:#1a1a2e,stroke:#5eead4,color:#5eead4,stroke-width:2px
-    classDef ai fill:#1a1a2e,stroke:#fbbf24,color:#fbbf24,stroke-width:2px
-    classDef rust fill:#1a1a2e,stroke:#CE422B,color:#ff8266,stroke-width:2px
-    classDef gl fill:#1a1a2e,stroke:#a78bfa,color:#c4b5fd,stroke-width:2px
-    classDef result fill:#0d1117,stroke:#22c55e,color:#22c55e,stroke-width:3px
+    A[Visitor opens Fun Particle] --> B[Allows camera]
+    B --> C[Controls particles with hand gestures]
+    C --> D[Tries modes and audio reaction]
+    D --> E[Opens feedback page]
+    E --> F[Signs in with Google]
+    F --> G[Sends rating, category, and message]
+    G --> H[Feedback appears in live stream]
+    H --> I[Creator improves next version]
 ```
 
 ---
 
-## 🛠️ The Arsenal
+## Feedback Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Page as Feedback Page
+    participant Auth as Google Sign-In
+    participant API as Feedback API
+    participant DB as Firestore
+
+    User->>Page: Opens feedback experience
+    User->>Auth: Signs in with Google
+    Auth-->>Page: Returns verified user
+    User->>Page: Adds rating and message
+    Page->>API: Sends feedback payload
+    API->>DB: Saves feedback
+    DB-->>API: Returns latest feedback list
+    API-->>Page: Sends stats and stream
+    Page-->>User: Shows confirmation
+```
+
+---
+
+## Tech Stack
 
 <div align="center">
 
-| Rust | WASM | Three.js | WebGL | MediaPipe | Cloudflare |
-|---|---|---|---|---|---|
-| 1.75+ | Core | r160 | 2.0 | Hands | Pages |
+| Layer | Tools |
+| --- | --- |
+| Frontend | HTML, CSS, JavaScript |
+| Visual Engine | Three.js, WebGL |
+| Tracking | MediaPipe Hands |
+| Audio | Web Audio API |
+| Auth | Firebase Authentication |
+| Data | Firebase Firestore |
+| Hosting | Vercel, Render, or static hosting |
 
 </div>
 
 ---
 
-## 🎮 Control Grimoire
-
-Master these gestures and bend reality to your will.
-
-| Gesture | Mode | Effect |
-|---|---|---|
-| ☝️ Index Finger | Swarm | Particles orbit your fingertip like moons around a planet |
-| 🤏 Pinch | Supernova | Releases a chaotic burst of color and energy |
-| 🖐️ Open Palm | Kamehameha | Charges an energy beam |
-| ✊ Fist | Fire | Unleashes the charged beam in a torrent of light |
-| 🙌 Two Hands | Battle | Two opposing gravity wells fight for cosmic dominance |
-| 🎵 Music | Audio | Particles dance to bass, treble, and rhythm |
-
----
-
-## 🪞 Shape Library
+## Project Links
 
 <div align="center">
 
-| 🌌 Swarm | ❤️ Heart | 🪐 Saturn | 🌸 Flower |
-|---|---|---|---|
-| 🎆 Fireworks | ⚔️ Battle | 🛡️ Survival | 🎵 Audio Reactive |
+| Link | URL |
+| --- | --- |
+| Live project | https://particle.yogender1.me |
+| Feedback page | https://particle.yogender1.me/feedback.html |
+| GitHub repo | https://github.com/yogender-ai/Fun-Particle-feedback |
+| Creator GitHub | https://github.com/yogender-ai |
+| Creator LinkedIn | https://www.linkedin.com/in/yogender1/ |
 
 </div>
 
 ---
 
-## 🚀 Quick Start
+## Roadmap Ideas
 
-### 🌐 Just Want To Play?
-
-```bash
-# One link. Zero setup.
-open https://particle-gravity-fun.pages.dev/
-```
-
-Allow webcam → wave hands → become gravity.
-
-### 🛠️ Want To Hack On It?
-
-```bash
-# Clone
-git clone https://github.com/yogender-ai/Particle-Gravity-Fun.git
-cd Particle-Gravity-Fun
-
-# Install
-npm install
-
-# Build WASM core
-wasm-pack build --target web --release
-
-# Launch
-npm run dev
-```
+- Add more feedback categories.
+- Add public feature voting.
+- Show recent ratings in a cleaner dashboard.
+- Add admin moderation for feedback entries.
+- Add shareable mode links for Fun Particle.
+- Add a short demo video or GIF preview to the README.
+- Add screenshots for desktop and mobile views.
 
 ---
 
-## 📊 Benchmarks
-
-```text
-PARTICLE COUNT
-████████████████████████████████████████  8,192
-
-FRAME RATE (avg)
-███████████████████████████████████████░  62 FPS
-
-HAND TRACKING LATENCY
-██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  18ms
-
-WASM EXECUTION (per frame)
-████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  2.4ms
-
-BUNDLE SIZE (gzipped)
-███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  280 KB
-
-COLD START TIME
-████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  1.8s
-```
-
-### 📈 Performance Across Devices
-
-| Device | FPS | Particles | Notes |
-|---|---:|---:|---|
-| 🖥️ M1 MacBook Pro | 120 | 16,384 | Buttery smooth |
-| 💻 Ryzen 5 + RTX 3060 | 144 | 16,384 | Maxed out |
-| 💼 Intel i5 + Iris Xe | 60 | 8,192 | Default config |
-| 📱 iPhone 13 | 60 | 4,096 | Auto-scaled |
-| 📱 Pixel 6 | 58 | 4,096 | Auto-scaled |
-| 🥔 2015 Chromebook | 30 | 2,048 | Still magical |
-
----
-
-## 🏗️ Project Architecture
-
-```text
-quantum-flux/
-│
-├── src-rust/                   # Rust → WASM core
-│   ├── lib.rs                  # WASM entry & bindings
-│   ├── physics/
-│   │   ├── solver.rs           # N-body gravity solver
-│   │   ├── verlet.rs           # Verlet integration
-│   │   └── spatial_hash.rs     # O(n) neighbor lookups
-│   ├── particle.rs             # Particle struct & lifecycle
-│   └── morphs/
-│       ├── heart.rs            # Heart formation
-│       ├── saturn.rs           # Orbital rings
-│       └── flower.rs           # Fibonacci spiral
-│
-├── src/
-│   ├── main.js                 # Entry point
-│   ├── scene.js                # Three.js scene setup
-│   ├── shaders/
-│   │   ├── particle.vert       # Vertex shader
-│   │   └── particle.frag       # Fragment glow & color
-│   ├── tracking/
-│   │   ├── mediapipe.js        # AI wrapper
-│   │   └── gestures.js         # Gesture recognition
-│   ├── audio/
-│   │   └── analyzer.js         # FFT music reactor
-│   └── ui/
-│       ├── hud.js              # Score & stats overlay
-│       └── controls.js         # Mode switcher
-│
-├── public/                     # Static assets
-├── feedback.html               # Feedback page
-├── README.md                   # You are here
-└── wrangler.toml               # Cloudflare config
-```
-
----
-
-## 🗺️ Roadmap
-
-```text
-   ┌─ ✅ v1.0 ─────── 8K particles + hand tracking
-   │
-   ├─ ✅ v2.0 ─────── Battle mode + audio reactive
-   │
-   ├─ ✅ v2.1 ─────── Kamehameha + survival mode  ◀── you are here
-   │
-   ├─ 🔄 v2.2 ─────── Multiplayer cosmos (WebRTC)
-   │
-   ├─ 🔮 v3.0 ─────── VR/AR support (WebXR)
-   │
-   └─ 🌠 v4.0 ─────── AI-generated particle behaviors
-```
-
----
-
-## 💬 Feedback — Speak Into The Void
-
-Your voice shapes the next iteration.
+## Creator
 
 <div align="center">
 
-| 💭 Have an idea? | 🐛 Found a bug? | ⭐ Loved it? |
-|---|---|---|
-| [Open Discussion](https://github.com/yogender-ai/Particle-Gravity-Fun/discussions) | [Report Issue](https://github.com/yogender-ai/Particle-Gravity-Fun/issues) | [Star the repo](https://github.com/yogender-ai/Particle-Gravity-Fun/stargazers) |
+Built by **Yogender**
 
-</div>
+<br />
 
----
-
-## ⭐ Show Some Love
-
-<div align="center">
-
-If Quantum Flux made you smile or spend a Saturday afternoon bending particles, a star keeps the cosmos expanding.
-
-<br/>
-
-<a href="https://github.com/yogender-ai/Particle-Gravity-Fun">
-  <img src="https://img.shields.io/badge/STAR%20THE%20REPO-Thank%20You!-FFD700?style=for-the-badge&logo=github&logoColor=000&labelColor=000" alt="Star the repo" />
+<a href="https://www.linkedin.com/in/yogender1/">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>
+&nbsp;
+<a href="https://github.com/yogender-ai">
+  <img src="https://img.shields.io/badge/GitHub-yogender--ai-111111?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
 </a>
 
 </div>
 
 ---
 
-## 🤝 Contributing
-
-```bash
-# Fork the cosmos
-git checkout -b feature/cosmic-idea
-
-# Channel the muse
-git commit -m "Add black hole mode"
-
-# Push to the void
-git push origin feature/cosmic-idea
-```
-
-Looking for help with:
-
-- 🎨 New morph shapes
-- 🎵 Better audio analysis
-- 📱 Mobile gesture mapping
-- 🌐 i18n / translations
-- 📚 Tutorials and blog posts
-- 🎬 Demo video creation
-
----
-
-## 📜 License & Acknowledgements
-
-MIT License — fork it, ship it, remix it.
-
-Standing on the shoulders of giants:
-
-- [Three.js](https://threejs.org/)
-- [Rust](https://www.rust-lang.org/)
-- [MediaPipe](https://developers.google.com/mediapipe)
-- [WebAssembly](https://webassembly.org/)
-- [Cloudflare Pages](https://pages.cloudflare.com/)
-
-<br/>
+## Support
 
 <div align="center">
 
-```text
-QUANTUM FLUX v2.1 · Rust ❤️ WASM ❤️ WebGL · Made in the cosmos
-```
+If Fun Particle made you smile, star the repository and send feedback from the live app.
 
-<a href="#top">Back to top ↑</a>
+<br /><br />
+
+<a href="https://github.com/yogender-ai/Fun-Particle-feedback">
+  <img src="https://img.shields.io/badge/Star%20the%20Repo-Thank%20You-FFD700?style=for-the-badge&logo=github&logoColor=000&labelColor=050816" alt="Star the repository" />
+</a>
+
+<br /><br />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,2,30,24&height=150&section=footer&animation=twinkling" width="100%" alt="Animated footer" />
+
+<a href="#top">Back to top</a>
 
 </div>
